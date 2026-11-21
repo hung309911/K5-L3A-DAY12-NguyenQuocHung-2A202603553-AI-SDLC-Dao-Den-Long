@@ -1,0 +1,5 @@
+#!/bin/sh
+# Installed with: git config core.hooksPath .githooks
+# A failed verification prevents committing an unverified Phase 1.
+node scripts/verify.mjs || exit 1
+git add docs/proof/phase-1/unit-tests.tap docs/proof/phase-1/verification.json docs/proof/phase-1/*.jsonl

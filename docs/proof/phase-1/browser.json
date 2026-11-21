@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-11-21T03:43:25.071Z",
+  "browser": "157.0.8103.79",
+  "viewport": [
+    1440,
+    900
+  ],
+  "mobile_viewport": [
+    390,
+    844
+  ],
+  "checks": [
+    "render",
+    "keyboard movement",
+    "jump",
+    "pause/resume",
+    "pulse/stun",
+    "deposit/win",
+    "loss",
+    "replay",
+    "mobile no horizontal overflow",
+    "real touch movement"
+  ],
+  "errors": [],
+  "failed_requests": [],
+  "server_log": "Local: http://127.0.0.1:4271\n",
+  "scenario_note": "Win/loss/pulse are arranged through ?qa=1 using the same Game class; normal movement and jump use the default level."
+}

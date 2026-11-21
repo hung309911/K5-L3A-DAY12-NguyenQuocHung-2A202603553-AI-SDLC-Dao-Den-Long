@@ -1,0 +1,86 @@
+{
+  "generated_at": "2026-11-21T03:46:48.375Z",
+  "scope": "phase-1-contract-1.0",
+  "tests": {
+    "total": 56,
+    "passed": 56,
+    "failed": 0
+  },
+  "scenarios": [
+    {
+      "name": "win",
+      "result": {
+        "type": "end",
+        "ticks": 181,
+        "state": "won",
+        "score": 1742
+      },
+      "byte_identical_replay": true,
+      "sha256": "8a83bb7b7ead17437aeb00c2b804687c71e5c3d0bddb7b8abdc00bb3981ba2f7"
+    },
+    {
+      "name": "no-flames",
+      "result": {
+        "type": "end",
+        "ticks": 1,
+        "state": "lost",
+        "score": 0
+      },
+      "byte_identical_replay": true,
+      "sha256": "648213e21e9c056239efaa2232aba83a895f389682170e90a8fc7e419d3f750d"
+    },
+    {
+      "name": "dawn",
+      "result": {
+        "type": "end",
+        "ticks": 60,
+        "state": "lost",
+        "score": 0
+      },
+      "byte_identical_replay": true,
+      "sha256": "ce170397364af280008e4900909cd041eff25f52f23c426986c7a610d73d3908"
+    },
+    {
+      "name": "pulse",
+      "result": {
+        "type": "end",
+        "ticks": 200,
+        "state": "playing",
+        "score": 15
+      },
+      "byte_identical_replay": true,
+      "sha256": "0c378eb750d3f2ceabd1f11d82a8ad5dd5e158c8d3f50876282e5ceb84d59a56"
+    },
+    {
+      "name": "default-playthrough-no-scenario",
+      "result": {
+        "type": "end",
+        "ticks": 2925,
+        "state": "won",
+        "score": 1922
+      },
+      "byte_identical_replay": true,
+      "sha256": "ede8f86ff536decf52b584bac7813536310e410a9f7f665ab19bba7929f24bfa"
+    }
+  ],
+  "default_random_replay_identical": true,
+  "machine": {
+    "platform": "win32",
+    "release": "10.0.26200",
+    "node": "v26.13.0",
+    "cpu": "AMD Ryzen 7 4800H with Radeon Graphics         ",
+    "memory_gib": 15
+  },
+  "source_sha256": {
+    "game.contract.json": "021810b456907cf05537c0181c5b6b470d07d2ca20d385fbc8d3544eaad26f04",
+    "src/game.mjs": "f22af303c987972a3db376579d458c41031a95187ed081c466a4ed9a74073c41",
+    "src/headless.mjs": "3654f85ca63799b0a97868ca17e674f1d937fca61d4dee4bfa5f3cee8e8a23ac",
+    "src/validation.mjs": "55c63b698bcfc615253d7543dc1fd4234263575581db4afbf22dfb7338417912",
+    "src/client.mjs": "485f21df1f48bfc434e05dd4b4468f53e3bde339bbc00522580da687a5370b56",
+    "web/index.html": "83661c24c6635ca5d5d38f55ef1540d466129c55527e50ff9d3a4a5de4f293e8",
+    "web/style.css": "31331d4a37b48f3f4babcaa14fdde5dc280ebee487bcbd339663b5b1a58d0026",
+    "tests/game.test.mjs": "1bf618f0aea1fa9d37960e6a107677a3d412c95f7aaf80f33477257da43dc92c",
+    "tests/cli.test.mjs": "9a38b35c0d71b5ac290aabbd9d470b148ac06a71b84d1ff925cff56ac066ba7f",
+    "scripts/verify.mjs": "7cbf030d62d1e362144a6f092824c952b2621234f39d3caa221f1c73ae0acffc"
+  }
+}

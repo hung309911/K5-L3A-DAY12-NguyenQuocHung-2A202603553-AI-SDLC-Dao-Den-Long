@@ -1,0 +1,346 @@
+TAP version 13
+# Subtest: CLI contract defaults to snapshots 0,10; final record is mandatory end
+ok 1 - CLI contract defaults to snapshots 0,10; final record is mandatory end
+  ---
+  duration_ms: 79.0207
+  type: 'test'
+  ...
+# Subtest: no optional scenario or inputs files is supported
+ok 2 - no optional scenario or inputs files is supported
+  ---
+  duration_ms: 67.9458
+  type: 'test'
+  ...
+# Subtest: event tick follows input tick by one, then snapshot, then end on early game over
+ok 3 - event tick follows input tick by one, then snapshot, then end on early game over
+  ---
+  duration_ms: 65.5083
+  type: 'test'
+  ...
+# Subtest: malformed input schema exits 2, writes stderr and no output
+ok 4 - malformed input schema exits 2, writes stderr and no output
+  ---
+  duration_ms: 63.5399
+  type: 'test'
+  ...
+# Subtest: malformed scenario schema exits 2
+ok 5 - malformed scenario schema exits 2
+  ---
+  duration_ms: 63.4658
+  type: 'test'
+  ...
+# Subtest: malformed JSON file exits 2
+ok 6 - malformed JSON file exits 2
+  ---
+  duration_ms: 62.8477
+  type: 'test'
+  ...
+# Subtest: unknown and duplicate CLI arguments fail instead of silently ignoring
+ok 7 - unknown and duplicate CLI arguments fail instead of silently ignoring
+  ---
+  duration_ms: 126.5586
+  type: 'test'
+  ...
+# Subtest: headless JSONL is byte-for-byte deterministic with random generation
+ok 8 - headless JSONL is byte-for-byte deterministic with random generation
+  ---
+  duration_ms: 175.8736
+  type: 'test'
+  ...
+# Subtest: tick 0: player at origin, five lamps, no setup events or setup score
+ok 9 - tick 0: player at origin, five lamps, no setup events or setup score
+  ---
+  duration_ms: 2.9413
+  type: 'test'
+  ...
+# Subtest: one second of motion is six metres, camera-relative rotation is exact
+ok 10 - one second of motion is six metres, camera-relative rotation is exact
+  ---
+  duration_ms: 0.829
+  type: 'test'
+  ...
+# Subtest: diagonal input is normalized and absent input fields retain previous values
+ok 11 - diagonal input is normalized and absent input fields retain previous values
+  ---
+  duration_ms: 0.3148
+  type: 'test'
+  ...
+# Subtest: pickup includes exact radius and ignores height; outside radius stays
+ok 12 - pickup includes exact radius and ignores height; outside radius stays
+  ---
+  duration_ms: 0.497
+  type: 'test'
+  ...
+# Subtest: pickup capacity does not destroy uncollected motes
+ok 13 - pickup capacity does not destroy uncollected motes
+  ---
+  duration_ms: 0.1953
+  type: 'test'
+  ...
+# Subtest: deposit includes exact radius, supports partial deposit and correct event payload
+ok 14 - deposit includes exact radius, supports partial deposit and correct event payload
+  ---
+  duration_ms: 0.2919
+  type: 'test'
+  ...
+# Subtest: outside interact radius cannot deposit
+ok 15 - outside interact radius cannot deposit
+  ---
+  duration_ms: 0.2007
+  type: 'test'
+  ...
+# Subtest: interact is a rising edge; nearest lamp wins ties in stable ID order
+ok 16 - interact is a rising edge; nearest lamp wins ties in stable ID order
+  ---
+  duration_ms: 9.6716
+  type: 'test'
+  ...
+# Subtest: pulse includes radius, reports IDs, costs light, pushes and stuns
+ok 17 - pulse includes radius, reports IDs, costs light, pushes and stuns
+  ---
+  duration_ms: 0.5761
+  type: 'test'
+  ...
+# Subtest: pulse cannot fire without sufficient carried light
+ok 18 - pulse cannot fire without sufficient carried light
+  ---
+  duration_ms: 0.2877
+  type: 'test'
+  ...
+# Subtest: pulse cooldown and holding do not retrigger actions
+ok 19 - pulse cooldown and holding do not retrigger actions
+  ---
+  duration_ms: 0.3652
+  type: 'test'
+  ...
+# Subtest: stun recovers at the declared tick without moving before recovery
+ok 20 - stun recovers at the declared tick without moving before recovery
+  ---
+  duration_ms: 0.4637
+  type: 'test'
+  ...
+# Subtest: shade chase speed uses XZ distance, not vertical offset
+ok 21 - shade chase speed uses XZ distance, not vertical offset
+  ---
+  duration_ms: 0.2962
+  type: 'test'
+  ...
+# Subtest: contact: one flame, floor-rounded light drop and recoverable motes
+ok 22 - contact: one flame, floor-rounded light drop and recoverable motes
+  ---
+  duration_ms: 0.1942
+  type: 'test'
+  ...
+# Subtest: invulnerability blocks simultaneous and repeated hits until exactly two seconds
+ok 23 - invulnerability blocks simultaneous and repeated hits until exactly two seconds
+  ---
+  duration_ms: 0.525
+  type: 'test'
+  ...
+# Subtest: lit lamp safe zone prevents damage, including shades placed inside by a scenario
+ok 24 - lit lamp safe zone prevents damage, including shades placed inside by a scenario
+  ---
+  duration_ms: 1.1703
+  type: 'test'
+  ...
+# Subtest: chasing shades cannot cross through a lit lamp safe radius
+ok 25 - chasing shades cannot cross through a lit lamp safe radius
+  ---
+  duration_ms: 1.4622
+  type: 'test'
+  ...
+# Subtest: all five lamps wins once; only earned events score, with time and flame bonus
+ok 26 - all five lamps wins once; only earned events score, with time and flame bonus
+  ---
+  duration_ms: 0.4806
+  type: 'test'
+  ...
+# Subtest: no flames loses at step one and records correct reason
+ok 27 - no flames loses at step one and records correct reason
+  ---
+  duration_ms: 0.1855
+  type: 'test'
+  ...
+# Subtest: dawn is based on simulated steps, not wall clock
+ok 28 - dawn is based on simulated steps, not wall clock
+  ---
+  duration_ms: 0.1627
+  type: 'test'
+  ...
+# Subtest: jump rises and lands; a held key cannot repeatedly jump
+ok 29 - jump rises and lands; a held key cannot repeatedly jump
+  ---
+  duration_ms: 0.2736
+  type: 'test'
+  ...
+# Subtest: shore boundary prevents falls without damage
+ok 30 - shore boundary prevents falls without damage
+  ---
+  duration_ms: 0.3286
+  type: 'test'
+  ...
+# Subtest: random flags disable initial generation and future spawning
+ok 31 - random flags disable initial generation and future spawning
+  ---
+  duration_ms: 2.2268
+  type: 'test'
+  ...
+# Subtest: spawn events have tick and stable generated IDs, avoiding explicit ID collisions
+ok 32 - spawn events have tick and stable generated IDs, avoiding explicit ID collisions
+  ---
+  duration_ms: 4.4273
+  type: 'test'
+  ...
+# Subtest: same seed and inputs produce identical complete state and events
+ok 33 - same seed and inputs produce identical complete state and events
+  ---
+  duration_ms: 24.0195
+  type: 'test'
+  ...
+# Subtest: invalid inputs case 1 is rejected
+ok 34 - invalid inputs case 1 is rejected
+  ---
+  duration_ms: 0.4026
+  type: 'test'
+  ...
+# Subtest: invalid inputs case 2 is rejected
+ok 35 - invalid inputs case 2 is rejected
+  ---
+  duration_ms: 0.049
+  type: 'test'
+  ...
+# Subtest: invalid inputs case 3 is rejected
+ok 36 - invalid inputs case 3 is rejected
+  ---
+  duration_ms: 0.0382
+  type: 'test'
+  ...
+# Subtest: invalid inputs case 4 is rejected
+ok 37 - invalid inputs case 4 is rejected
+  ---
+  duration_ms: 0.0622
+  type: 'test'
+  ...
+# Subtest: invalid inputs case 5 is rejected
+ok 38 - invalid inputs case 5 is rejected
+  ---
+  duration_ms: 0.0407
+  type: 'test'
+  ...
+# Subtest: invalid inputs case 6 is rejected
+ok 39 - invalid inputs case 6 is rejected
+  ---
+  duration_ms: 0.0654
+  type: 'test'
+  ...
+# Subtest: invalid inputs case 7 is rejected
+ok 40 - invalid inputs case 7 is rejected
+  ---
+  duration_ms: 0.0483
+  type: 'test'
+  ...
+# Subtest: invalid inputs case 8 is rejected
+ok 41 - invalid inputs case 8 is rejected
+  ---
+  duration_ms: 0.1052
+  type: 'test'
+  ...
+# Subtest: invalid inputs case 9 is rejected
+ok 42 - invalid inputs case 9 is rejected
+  ---
+  duration_ms: 0.0765
+  type: 'test'
+  ...
+# Subtest: invalid inputs case 10 is rejected
+ok 43 - invalid inputs case 10 is rejected
+  ---
+  duration_ms: 0.0531
+  type: 'test'
+  ...
+# Subtest: invalid inputs case 11 is rejected
+ok 44 - invalid inputs case 11 is rejected
+  ---
+  duration_ms: 0.0414
+  type: 'test'
+  ...
+# Subtest: invalid inputs case 12 is rejected
+ok 45 - invalid inputs case 12 is rejected
+  ---
+  duration_ms: 0.0469
+  type: 'test'
+  ...
+# Subtest: invalid scenario case 1 is rejected
+ok 46 - invalid scenario case 1 is rejected
+  ---
+  duration_ms: 0.2972
+  type: 'test'
+  ...
+# Subtest: invalid scenario case 2 is rejected
+ok 47 - invalid scenario case 2 is rejected
+  ---
+  duration_ms: 0.0465
+  type: 'test'
+  ...
+# Subtest: invalid scenario case 3 is rejected
+ok 48 - invalid scenario case 3 is rejected
+  ---
+  duration_ms: 0.0502
+  type: 'test'
+  ...
+# Subtest: invalid scenario case 4 is rejected
+ok 49 - invalid scenario case 4 is rejected
+  ---
+  duration_ms: 0.042
+  type: 'test'
+  ...
+# Subtest: invalid scenario case 5 is rejected
+ok 50 - invalid scenario case 5 is rejected
+  ---
+  duration_ms: 0.0389
+  type: 'test'
+  ...
+# Subtest: invalid scenario case 6 is rejected
+ok 51 - invalid scenario case 6 is rejected
+  ---
+  duration_ms: 0.0382
+  type: 'test'
+  ...
+# Subtest: invalid scenario case 7 is rejected
+ok 52 - invalid scenario case 7 is rejected
+  ---
+  duration_ms: 0.0485
+  type: 'test'
+  ...
+# Subtest: invalid scenario case 8 is rejected
+ok 53 - invalid scenario case 8 is rejected
+  ---
+  duration_ms: 0.0539
+  type: 'test'
+  ...
+# Subtest: invalid scenario case 9 is rejected
+ok 54 - invalid scenario case 9 is rejected
+  ---
+  duration_ms: 0.0795
+  type: 'test'
+  ...
+# Subtest: invalid scenario case 10 is rejected
+ok 55 - invalid scenario case 10 is rejected
+  ---
+  duration_ms: 0.0498
+  type: 'test'
+  ...
+# Subtest: invalid scenario case 11 is rejected
+ok 56 - invalid scenario case 11 is rejected
+  ---
+  duration_ms: 0.0682
+  type: 'test'
+  ...
+1..56
+# tests 56
+# suites 0
+# pass 56
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 789.0981

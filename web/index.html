@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a28">
+  <meta name="description" content="Theo chân Mây qua Đảo Bến: gom đom đóm, thắp đèn lồng và đem ánh sáng về giữa biển mây.">
+  <title>Đảo Đèn Lồng · Đêm 1</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23101a28'/%3E%3Cellipse cx='32' cy='30' rx='17' ry='21' fill='%23ffbd62'/%3E%3Cpath d='M24 10h16M24 50h16M32 51v9' stroke='%23896a40' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+</head>
+<body>
+  <canvas id="scene" tabindex="0" aria-label="Game 3D Đảo Đèn Lồng"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <header class="topbar">
+    <div class="brand"><span class="brand-symbol" aria-hidden="true">✧</span><div>ĐẢO ĐÈN LỒNG<small>ĐÊM 1 · ĐẢO BẾN</small></div></div>
+    <div id="hud" class="hud" hidden>
+      <div class="stat"><span>SỨC SỐNG</span><b id="flames" aria-label="Sức sống">♨ ♨ ♨</b></div>
+      <div class="stat timer"><span>TRƯỚC BÌNH MINH</span><b id="time">05:00</b></div>
+      <div class="stat"><span>ĐÈN ĐÃ THẮP</span><b><i id="lit">0</i><em> / 5</em></b></div>
+      <div class="stat"><span>ĐIỂM</span><b id="score">0</b></div>
+    </div>
+    <div class="tools"><button id="sound" class="quiet" aria-pressed="false" title="Bật hoặc tắt âm thanh">Âm thanh: tắt</button><button id="pause" class="quiet" hidden>Tạm dừng</button></div>
+  </header>
+  <section id="intro" class="intro" aria-labelledby="title">
+    <div class="eyebrow"><span></span> MỘT ĐỐM SÁNG, MỘT NIỀM HY VỌNG</div>
+    <h1 id="title">Đảo<br><em>Đèn Lồng</em></h1>
+    <p>Đêm đã phủ xuống biển mây.<br>Cùng Mây nhặt những đốm sáng nhỏ,<br>thắp lại năm ngọn đèn trên đảo.</p>
+    <button id="start" class="primary">Thắp sáng đêm nay <span aria-hidden="true">✧</span></button>
+    <div class="intro-note">Một chuyến phiêu lưu nhỏ · Khoảng 5 phút</div>
+  </section>
+  <aside id="mission" class="mission" hidden><span class="mission-icon" aria-hidden="true">✧</span><div><b>Mang ánh sáng trở về</b><span id="mission-text">Gom đom đóm và mang đến năm đèn lồng.</span></div></aside>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="interaction" class="interaction" hidden></div>
+  <section id="carry" class="carry" hidden aria-label="Túi đom đóm">
+    <div class="carry-top"><span>✦ ĐOM ĐÓM</span><b><span id="carried">0</span><em> / 12</em></b></div>
+    <div class="meter"><div id="carry-fill"></div></div>
+    <span id="pulse-hint">F · Tỏa sáng · cần 3 đom đóm</span>
+  </section>
+  <div id="lantern-track" class="lantern-track" hidden aria-label="Tiến độ năm đèn lồng"></div>
+  <footer id="controls" class="controls"><span><kbd>W A S D</kbd> Di chuyển</span><span><kbd>Space</kbd> Nhảy</span><span><kbd>E</kbd> Nạp đèn</span><span><kbd>F</kbd> Tỏa sáng</span><span class="camera-help">Kéo chuột để xoay góc nhìn</span></footer>
+  <div id="modal" class="modal" hidden><section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title"><span id="modal-kicker" class="eyebrow">ĐẢO BẾN</span><h2 id="modal-title">Đêm tạm lắng</h2><p id="modal-body"></p><button id="resume" class="primary">Tiếp tục</button><button id="restart" class="secondary">Chơi lại từ đầu</button></section></div>
+  <div id="touch" class="touch" aria-label="Điều khiển cảm ứng"><div class="dpad"><button data-key="KeyW" aria-label="Tiến">▲</button><button data-key="KeyA" aria-label="Trái">◀</button><button data-key="KeyS" aria-label="Lùi">▼</button><button data-key="KeyD" aria-label="Phải">▶</button></div><div class="actions"><button data-key="Space">Nhảy</button><button data-key="KeyE">Nạp đèn</button><button data-key="KeyF">Tỏa sáng</button></div></div>
+  <noscript><p class="fallback">Cần bật JavaScript để chơi Đảo Đèn Lồng.</p></noscript>
+  <script type="module" src="./src/client.mjs"></script>
+</body>
+</html>

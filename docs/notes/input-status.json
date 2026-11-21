@@ -1,0 +1,8 @@
+{
+  "scope": "assignment-inputs-only",
+  "phase": 1,
+  "status": "ready_for_manual_review",
+  "missing": [],
+  "game_sources_present": true,
+  "note": "File presence does not verify requirement content or product correctness."
+}

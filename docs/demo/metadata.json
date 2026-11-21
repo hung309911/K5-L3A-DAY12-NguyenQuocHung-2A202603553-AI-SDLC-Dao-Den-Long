@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-11-21T03:44:31.104Z",
+  "captured_frames": 904,
+  "fps": 15,
+  "duration_s": 60.266666666666666,
+  "bytes": 3904241,
+  "codec": "H.264 / yuv420p / MP4",
+  "source": "Real Chromium screenshots, keyboard test then normal-level bot input replay; no scenario overrides in the win replay.",
+  "final_state": {
+    "tick": 2925,
+    "state": "won",
+    "score": 1922
+  },
+  "verification_source": "docs/proof/phase-1/verification.json",
+  "note": "Capture cadence may shorten playback relative to wall-clock recording time; this is not a performance benchmark."
+}
