@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-11-21T03:47:30.318Z",
+  "source_commit": "8258a52ed44f58daeb9765de24b1f7499c547c52",
+  "method": "git clone --no-hardlinks into a new directory; npm ci; npm run build; npm run verify",
+  "platform": "win32",
+  "node": "v26.13.0",
+  "tests": {
+    "total": 56,
+    "passed": 56,
+    "failed": 0
+  },
+  "source_hashes_match": true,
+  "build_output": "dist/index.html and local vendor assets",
+  "runtime_browser": "Chrome tested separately by browser-qa.mjs"
+}
